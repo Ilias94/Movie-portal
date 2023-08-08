@@ -1,1 +1,7 @@
-<p>search works!</p>
+<input [(ngModel)]="query" (keyup.enter)="searchMovies()" placeholder="Search for movies...">
+<button (click)="searchMovies()">Search</button>
+<ul>
+  <li *ngFor="let movie of searchResults">
+    <a [routerLink]="['/movie-details', movie.id]">{{ movie.title }}</a>
+  </li>
+</ul>
