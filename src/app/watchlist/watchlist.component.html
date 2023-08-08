@@ -1,1 +1,7 @@
-<p>watchlist works!</p>
+<ul>
+    <li *ngFor="let movie of watchlist">
+      {{ movie.title }}
+      <button (click)="removeFromWatchlist(movie)">Remove</button>
+    </li>
+  </ul>
+  

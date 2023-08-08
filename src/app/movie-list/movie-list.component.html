@@ -1,6 +1,6 @@
 <ul>
-    <li *ngFor="let movie of movies">
-      <a [routerLink]="['/details', movie.id]">{{ movie.title }}</a>
-    </li>
-  </ul>
-  
+  <li *ngFor="let movie of movies">
+    <a [routerLink]="['/details', movie.id]">{{ movie.title }}</a>
+    <button (click)="addToWatchlist(movie)">Add to Watchlist</button>
+  </li>
+</ul>

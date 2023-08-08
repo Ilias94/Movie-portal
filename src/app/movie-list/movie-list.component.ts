@@ -8,11 +8,18 @@ import { MovieService } from '../movie.service';
 })
 export class MovieListComponent implements OnInit {
   movies: any[] = [];
+  watchlist: any[] = [];
 
   constructor(private movieService: MovieService) {}
+
   ngOnInit() {
     this.movieService.getMovies().subscribe(movies => {
       this.movies = movies.results;
     });
+  }
+
+  addToWatchlist(movie: any) {
+    this.watchlist.push(movie);
+    console.log('Movie added to watchlist:', movie);
   }
 }
