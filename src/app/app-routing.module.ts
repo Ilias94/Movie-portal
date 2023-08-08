@@ -6,11 +6,11 @@ import { SearchComponent } from './search/search.component';
 import { WatchlistComponent } from './watchlist/watchlist.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/movie-list', pathMatch: 'full' },
   { path: 'search', component: SearchComponent },
   { path: 'movie-list', component: MovieListComponent },
   { path: 'movie-details/:id', component: MovieDetailsComponent },
   { path: 'watchlist', component: WatchlistComponent },
+  { path: '', redirectTo: '/movies', pathMatch: 'full' }
 ];
 
 @NgModule({
