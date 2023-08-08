@@ -25,5 +25,4 @@ export class MovieDetailsComponent implements OnInit {
       console.error('Movie ID is null');
     }
   }
-  
 }

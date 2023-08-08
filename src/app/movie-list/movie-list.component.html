@@ -1,1 +1,6 @@
-<p>movie-list works!</p>
+<ul>
+    <li *ngFor="let movie of movies">
+      <a [routerLink]="['/details', movie.id]">{{ movie.title }}</a>
+    </li>
+  </ul>
+  
